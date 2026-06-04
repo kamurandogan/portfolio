@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KD | Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fff2e1",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d9ed62",
+                        "surface-container-highest": "#f0e0ca",
+                        "on-background": "#221a0d",
+                        "tertiary-container": "#98667c",
+                        "secondary-fixed": "#d9ed62",
+                        "tertiary-fixed-dim": "#f2b6cf",
+                        "background": "#fff8f3",
+                        "surface-container": "#fcecd5",
+                        "on-secondary-fixed": "#191e00",
+                        "inverse-primary": "#ffb3ad",
+                        "outline-variant": "#e0bfbc",
+                        "on-primary-container": "#fffbff",
+                        "inverse-on-surface": "#ffeed8",
+                        "surface": "#fff8f3",
+                        "on-secondary-fixed-variant": "#424b00",
+                        "outline": "#8c716e",
+                        "on-tertiary-container": "#fffbff",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#ac3230",
+                        "surface-bright": "#fff8f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#bed049",
+                        "primary-fixed": "#ffdad7",
+                        "on-secondary-container": "#5e6b00",
+                        "on-surface": "#221a0d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#7d4e63",
+                        "on-primary-fixed": "#410004",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#58413f",
+                        "surface-variant": "#f0e0ca",
+                        "secondary": "#586400",
+                        "primary": "#a92f2e",
+                        "on-primary-fixed-variant": "#8b181b",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "primary-container": "#ca4743",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#65394e",
+                        "on-tertiary-fixed": "#330e22",
+                        "tertiary-fixed": "#ffd8e7",
+                        "surface-dim": "#e7d8c2",
+                        "surface-container-high": "#f6e6d0",
+                        "inverse-surface": "#382f20",
+                        "kd-coral": "#EC605A",
+                        "kd-pink": "#F4B8D1",
+                        "kd-lime": "#E9FD70"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "128px",
+                        "block-padding": "32px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap-mobile": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Bricolage Grotesque"],
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "nav-link": ["Hanken Grotesk"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "display-lg-mobile": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "nav-link": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #EC605A; /* kd-coral */
+        }
+        /* Custom selection color */
+        ::selection {
+            background: #E9FD70; /* kd-lime */
+            color: #221a0d; /* on-surface */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<header class="bg-transparent docked full-width top-0 flex justify-between items-center w-full px-gutter py-block-padding flat no shadows z-50 fixed">
+<div class="font-display-lg text-headline-lg font-black text-kd-lime">
+            KD
+        </div>
+<button class="font-nav-link text-nav-link text-kd-lime hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-100 px-4 py-2 border-2 border-transparent hover:border-black active:translate-x-1 active:translate-y-1 active:shadow-none">
+            Menu +
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col pt-[120px] px-gutter pb-block-padding relative">
+<div class="max-w-container-max mx-auto w-full flex-grow flex flex-col justify-between">
+<!-- Typographic Header Section -->
+<div class="mt-8 md:mt-16">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-kd-pink uppercase leading-none break-words max-w-4xl">
+                    LET'S TALK.
+                </h1>
+<p class="font-headline-lg text-headline-lg text-kd-lime mt-8 max-w-2xl border-l-4 border-kd-lime pl-6">
+                    Open to full-time roles and freelance projects.
+                </p>
+</div>
+<!-- Contact Links & CTA -->
+<div class="mt-section-gap-mobile md:mt-section-gap flex flex-col md:flex-row justify-between items-end gap-12 pb-8">
+<!-- Links List -->
+<ul class="flex flex-col gap-6 w-full md:w-auto">
+<li class="border-b-2 border-black pb-2">
+<a class="font-body-lg text-body-lg text-kd-lime hover:text-white transition-colors block w-full flex justify-between items-center group" href="mailto:kamurandgn@gmail.com">
+<span class="font-label-mono text-label-mono text-black mr-4">01</span>
+<span class="flex-grow">kamurandgn@gmail.com</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 transform duration-200">arrow_forward</span>
+</a>
+</li>
+<li class="border-b-2 border-black pb-2">
+<a class="font-body-lg text-body-lg text-kd-lime hover:text-white transition-colors block w-full flex justify-between items-center group" href="https://github.com/kamurandogan" rel="noopener noreferrer" target="_blank">
+<span class="font-label-mono text-label-mono text-black mr-4">02</span>
+<span class="flex-grow">github.com/kamurandogan</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 transform duration-200">arrow_forward</span>
+</a>
+</li>
+<li class="border-b-2 border-black pb-2">
+<a class="font-body-lg text-body-lg text-kd-lime hover:text-white transition-colors block w-full flex justify-between items-center group" href="https://linkedin.com/in/kamurandogan" rel="noopener noreferrer" target="_blank">
+<span class="font-label-mono text-label-mono text-black mr-4">03</span>
+<span class="flex-grow">linkedin.com/in/kamurandogan</span>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 transform duration-200">arrow_forward</span>
+</a>
+</li>
+</ul>
+<!-- Download CV CTA -->
+<a class="inline-flex items-center justify-center rounded-full border-4 border-kd-lime px-8 py-6 font-nav-link text-nav-link text-kd-lime hover:bg-kd-lime hover:text-[#EC605A] transition-all duration-200 shadow-[8px_8px_0px_0px_#E9FD70] hover:shadow-[4px_4px_0px_0px_#E9FD70] hover:translate-x-1 hover:translate-y-1 active:shadow-none active:translate-x-2 active:translate-y-2 uppercase whitespace-nowrap self-start md:self-end" href="#">
+                    Download CV
+                    <span class="material-symbols-outlined ml-3" style="font-variation-settings: 'FILL' 1;">download</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Decorative Corner Element (Brutalist detail) -->
+<div class="fixed bottom-0 right-0 w-32 h-32 pointer-events-none opacity-20">
+<svg class="w-full h-full fill-kd-lime" viewbox="0 0 100 100">
+<polygon points="100,0 100,100 0,100"></polygon>
+</svg>
+</div>
+</body></html>

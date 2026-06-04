@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tech Stack - KD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f3",
+                        "on-tertiary-fixed-variant": "#65394e",
+                        "tertiary-fixed-dim": "#f2b6cf",
+                        "outline": "#8c716e",
+                        "tertiary": "#7d4e63",
+                        "secondary-fixed": "#d9ed62",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "tertiary-fixed": "#ffd8e7",
+                        "surface-container-high": "#f6e6d0",
+                        "tertiary-container": "#98667c",
+                        "on-background": "#221a0d",
+                        "surface-container": "#fcecd5",
+                        "primary-container": "#ca4743",
+                        "on-primary-container": "#fffbff",
+                        "surface-container-highest": "#f0e0ca",
+                        "inverse-surface": "#382f20",
+                        "surface-tint": "#ac3230",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#221a0d",
+                        "background": "#fff8f3",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#424b00",
+                        "secondary-fixed-dim": "#bed049",
+                        "surface-variant": "#f0e0ca",
+                        "on-secondary-fixed": "#191e00",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#410004",
+                        "on-secondary-container": "#5e6b00",
+                        "outline-variant": "#e0bfbc",
+                        "inverse-primary": "#ffb3ad",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface-variant": "#58413f",
+                        "on-tertiary-fixed": "#330e22",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#e7d8c2",
+                        "surface-container-low": "#fff2e1",
+                        "inverse-on-surface": "#ffeed8",
+                        "primary-fixed": "#ffdad7",
+                        "secondary": "#586400",
+                        "on-primary-fixed-variant": "#8b181b",
+                        "primary": "#a92f2e",
+                        "surface-bright": "#fff8f3",
+                        "secondary-container": "#d9ed62",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "block-padding": "32px",
+                        "container-max": "1440px",
+                        "section-gap": "128px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "display-lg": ["Bricolage Grotesque"],
+                        "nav-link": ["Hanken Grotesk"],
+                        "headline-lg": ["Bricolage Grotesque"],
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-lg": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "nav-link": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Lime Yellow Background Override since it's a specific hex request */
+        .bg-lime-custom {
+            background-color: #E9FD70;
+        }
+    </style>
+</head>
+<body class="bg-lime-custom text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-base bg-transparent border-b-2 border-on-background flat no shadows">
+<div class="font-headline-xl text-headline-xl font-extrabold text-on-surface">
+            KD
+        </div>
+<button class="font-headline-lg text-headline-lg text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors duration-100 uppercase tracking-tighter">
+            Menu +
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col pt-32 pb-section-gap-mobile md:pb-section-gap px-gutter w-full max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mt-8 md:mt-16 w-full">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-16 uppercase tracking-tight max-w-[15ch] leading-none">
+                Tech Stack
+            </h1>
+<!-- Flowing Wrap Layout for Skill Tags -->
+<div class="flex flex-wrap gap-4 md:gap-6 items-start justify-start w-full max-w-5xl">
+<!-- Tag 1 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Flutter
+                </div>
+<!-- Tag 2 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Dart
+                </div>
+<!-- Tag 3 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Supabase
+                </div>
+<!-- Tag 4 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Firebase
+                </div>
+<!-- Tag 5 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Riverpod
+                </div>
+<!-- Tag 6 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    GoRouter
+                </div>
+<!-- Tag 7 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    RevenueCat
+                </div>
+<!-- Tag 8 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    NestJS
+                </div>
+<!-- Tag 9 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    PostgreSQL
+                </div>
+<!-- Tag 10 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Docker
+                </div>
+<!-- Tag 11 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Figma
+                </div>
+<!-- Tag 12 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    GitHub
+                </div>
+<!-- Tag 13 -->
+<div class="bg-on-background text-surface border-2 border-on-background rounded-full px-8 py-4 font-headline-lg text-headline-lg hover:bg-surface hover:text-on-background transition-colors duration-200 cursor-default select-none uppercase">
+                    Codemagic
+                </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap-mobile md:py-block-padding px-gutter flex flex-col md:flex-row justify-between items-center gap-base border-t-2 border-on-background flat no shadows bg-transparent mt-auto">
+<div class="font-headline-lg text-headline-lg font-black text-on-surface uppercase">
+            KD
+        </div>
+<div class="font-label-mono text-label-mono text-on-surface uppercase text-center md:text-left">
+            © 2024 KD. CRAFTED WITH FLUTTER.
+        </div>
+<nav class="flex gap-6 font-label-mono text-label-mono">
+<a class="text-on-surface hover:text-primary underline transition-colors" href="#">Github</a>
+<a class="text-on-surface hover:text-primary underline transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface hover:text-primary underline transition-colors" href="#">Twitter</a>
+<a class="text-on-surface hover:text-primary underline transition-colors" href="#">Resume</a>
+</nav>
+</footer>
+</body></html>

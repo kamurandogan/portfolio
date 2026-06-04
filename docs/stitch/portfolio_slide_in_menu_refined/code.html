@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flutter Craft - Navigation Drawer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#f2b6cf",
+                        "outline-variant": "#e0bfbc",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#330e22",
+                        "surface-container": "#fcecd5",
+                        "on-surface-variant": "#58413f",
+                        "on-secondary-container": "#5e6b00",
+                        "surface-container-high": "#f6e6d0",
+                        "surface-container-low": "#fff2e1",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffd8e7",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary": "#7d4e63",
+                        "on-primary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#98667c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#65394e",
+                        "secondary-fixed": "#d9ed62",
+                        "inverse-primary": "#ffb3ad",
+                        "on-primary-fixed-variant": "#8b181b",
+                        "surface-container-highest": "#f0e0ca",
+                        "secondary": "#586400",
+                        "secondary-container": "#d9ed62",
+                        "on-secondary-fixed-variant": "#424b00",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f3",
+                        "primary": "#a92f2e",
+                        "outline": "#8c716e",
+                        "on-error": "#ffffff",
+                        "on-background": "#221a0d",
+                        "surface": "#fff8f3",
+                        "secondary-fixed-dim": "#bed049",
+                        "on-secondary-fixed": "#191e00",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "surface-dim": "#e7d8c2",
+                        "on-surface": "#221a0d",
+                        "on-primary-fixed": "#410004",
+                        "surface-variant": "#f0e0ca",
+                        "primary-container": "#ca4743",
+                        "surface-tint": "#ac3230",
+                        "background": "#fff8f3",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ffeed8",
+                        "inverse-surface": "#382f20",
+                        "primary-fixed": "#ffdad7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "block-padding": "32px",
+                        "base": "8px",
+                        "section-gap": "128px",
+                        "gutter": "24px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "headline-lg": ["Bricolage Grotesque"],
+                        "display-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["18px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-lg-mobile": ["64px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface h-screen overflow-hidden font-body-md">
+<!-- Overlay (optional for brutalism, but good for focus) -->
+<div class="fixed inset-0 bg-background/50 z-40 md:hidden"></div>
+<!-- Navigation Drawer Component -->
+<nav class="fixed top-0 right-0 h-full w-full md:w-[45%] bg-[#F4B8D1] z-50 flex flex-col p-8 md:p-16 justify-between rounded-l-[40px] overflow-y-auto">
+<!-- Header Section -->
+<div class="flex justify-end w-full">
+<button aria-label="Close Navigation" class="font-headline-lg text-2xl md:text-3xl font-bold text-[#E9FD70] hover:opacity-80 transition-opacity focus:outline-none flex items-center gap-2">
+            Close <span>✕</span>
+</button>
+</div>
+<!-- Main Navigation Links -->
+<div class="flex-grow flex flex-col justify-center gap-6 md:gap-10 w-full mt-12 md:mt-24">
+<a class="group flex items-start text-[#E9FD70] hover:opacity-80 transition-opacity w-fit" href="#">
+<span class="font-display-lg text-6xl md:text-[100px] lg:text-[120px] font-black uppercase leading-none tracking-tight">HOME</span>
+<span class="material-symbols-outlined text-3xl md:text-5xl mt-2 ml-2 md:mt-4 md:ml-4 font-bold">arrow_outward</span>
+</a>
+<a class="group flex items-start text-[#E9FD70] hover:opacity-80 transition-opacity w-fit" href="#">
+<span class="font-display-lg text-6xl md:text-[100px] lg:text-[120px] font-black uppercase leading-none tracking-tight">PROJECTS</span>
+<span class="material-symbols-outlined text-3xl md:text-5xl mt-2 ml-2 md:mt-4 md:ml-4 font-bold">arrow_outward</span>
+</a>
+<a class="group flex items-start text-[#E9FD70] hover:opacity-80 transition-opacity w-fit" href="#">
+<span class="font-display-lg text-6xl md:text-[100px] lg:text-[120px] font-black uppercase leading-none tracking-tight">LET'S TALK</span>
+<span class="material-symbols-outlined text-3xl md:text-5xl mt-2 ml-2 md:mt-4 md:ml-4 font-bold">arrow_outward</span>
+</a>
+</div>
+<!-- Footer Section -->
+<div class="mt-auto pt-16 flex flex-col gap-10 text-[#E9FD70] font-body-md text-lg">
+<div class="flex flex-col md:flex-row gap-10 md:gap-24">
+<div class="flex flex-col gap-8">
+<div>
+<p>Haley (EP):</p>
+<p>0410 397 738</p>
+<a class="hover:underline" href="mailto:haley@pixel.melbourne">haley@pixel.melbourne</a>
+</div>
+<div>
+<p>Meline (Head of Prod.)</p>
+<p>0411 660 282</p>
+<a class="hover:underline" href="mailto:meline@pixel.melbourne">meline@pixel.melbourne</a>
+</div>
+</div>
+<div>
+<p>15 Aberdeen rd,</p>
+<p>Prahran, VIC 3181</p>
+</div>
+</div>
+<div class="flex gap-8 font-bold text-xl md:text-2xl font-headline-lg mt-4">
+<a class="hover:underline" href="#">Instagram</a>
+<a class="hover:underline" href="#">LinkedIn</a>
+</div>
+</div>
+</nav>
+<!-- Main Canvas Area (Dummy Content for Context) -->
+<main class="w-full h-full flex items-center justify-center bg-background md:w-[55%]">
+<h2 class="font-headline-xl text-headline-xl text-on-background opacity-20">CANVAS</h2>
+</main>
+</body></html>
