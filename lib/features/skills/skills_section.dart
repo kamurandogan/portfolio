@@ -5,23 +5,14 @@ import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
 
 const _skills = [
-  // Mobile
-  'Flutter', 'Dart 3', 'Riverpod', 'Bloc', 'Cubit', 'Provider', 'GetX',
-  // Architecture
+  'Flutter', 'Dart 3', 'Riverpod', 'Bloc', 'Cubit',
   'Clean Architecture', 'MVVM',
-  // Backend & DB
-  'Supabase', 'Firebase', 'NestJS', 'PostgreSQL', 'SQLite', 'Hive', 'Redis',
-  // Auth & Cloud
-  'JWT', 'Firebase Auth', 'Supabase Auth', 'Docker',
-  // AI & RAG
-  'RAG Pipeline', 'Vector DB', 'Prompt Engineering',
-  // Navigation & Models
+  'Supabase', 'Firebase', 'SQLite', 'SQL', 'Hive',
+  'Firebase Auth', 'Supabase Auth',
+  'RAG Pipeline', 'Prompt Engineering',
   'GoRouter', 'Freezed', 'json_serializable',
-  // Monetization
   'RevenueCat', 'Google Mobile Ads', 'IAP',
-  // CI/CD & Tooling
   'Codemagic', 'GitHub', 'Figma', 'Postman',
-  // Publishing
   'App Store Connect', 'Google Play Console',
 ];
 
