@@ -52,7 +52,7 @@ class _SkillsSectionState extends State<SkillsSection> {
         height: size.height,
         color: AppColors.lime,
         child: Center(
-          child: SingleChildScrollView(
+          child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: isMobile ? 24 : 48,
               vertical: isMobile ? 48 : 64,
