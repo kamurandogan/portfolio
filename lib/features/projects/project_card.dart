@@ -58,6 +58,7 @@ class _ProjectCardState extends State<ProjectCard> {
                   child: Image.asset(
                     widget.project.iconPath,
                     fit: BoxFit.cover,
+                    cacheWidth: 176,
                     errorBuilder: (ctx, err, st) => const SizedBox.shrink(),
                   ),
                 ),
@@ -124,6 +125,7 @@ class _ProjectCardState extends State<ProjectCard> {
                       child: Image.asset(
                         widget.project.screenshotPaths[i],
                         fit: BoxFit.contain,
+                        cacheHeight: 400,
                         errorBuilder: (ctx, err, st) => const SizedBox.shrink(),
                       ),
                     ),

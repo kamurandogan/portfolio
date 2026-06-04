@@ -64,11 +64,7 @@ class _PortfolioPageState extends ConsumerState<_PortfolioPage> {
   void _scrollToSection(GlobalKey key) {
     final index = [_heroKey, _projectsKey, _skillsKey, _contactKey].indexOf(key);
     if (index != -1) {
-      _pageController.animateToPage(
-        index,
-        duration: const Duration(milliseconds: 50),
-        curve: Curves.elasticIn,
-      );
+      _pageController.jumpToPage(index);
     }
   }
 
@@ -80,6 +76,7 @@ class _PortfolioPageState extends ConsumerState<_PortfolioPage> {
           PageView(
             controller: _pageController,
             scrollDirection: Axis.vertical,
+            physics: const PageScrollPhysics(parent: ClampingScrollPhysics()),
             children: [
               KeyedSubtree(key: _heroKey, child: const HeroSection()),
               KeyedSubtree(key: _projectsKey, child: const ProjectsSection()),
