@@ -46,26 +46,41 @@ class _ProjectCardState extends State<ProjectCard> {
               // Scrollable içerik — alt bar yüksekliği kadar padding bırak
               Positioned.fill(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.fromLTRB(
-                    cardPadding,
-                    cardPadding,
-                    cardPadding,
-                    cardPadding,
-                  ),
+                  padding: EdgeInsets.all(cardPadding),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Logo
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.asset(
-                          widget.project.iconPath,
-                          width: isMobile ? 72 : 88,
-                          height: isMobile ? 72 : 88,
-                          fit: BoxFit.cover,
-                          cacheWidth: 176,
-                          errorBuilder: (ctx, err, st) => const SizedBox.shrink(),
-                        ),
+                      // Logo + store ikonları aynı satırda
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              widget.project.iconPath,
+                              width: isMobile ? 72 : 88,
+                              height: isMobile ? 72 : 88,
+                              fit: BoxFit.cover,
+                              cacheWidth: 176,
+                              errorBuilder: (ctx, err, st) => const SizedBox.shrink(),
+                            ),
+                          ),
+                          const Spacer(),
+                          if (widget.project.appStoreUrl != null)
+                            _StoreIcon(
+                              icon: Icons.apple,
+                              tooltip: 'App Store',
+                              onTap: () => _launch(widget.project.appStoreUrl),
+                            ),
+                          if (widget.project.playStoreUrl != null) ...[
+                            const SizedBox(width: 8),
+                            _StoreIcon(
+                              icon: Icons.android,
+                              tooltip: 'Play Store',
+                              onTap: () => _launch(widget.project.playStoreUrl),
+                            ),
+                          ],
+                        ],
                       ),
                       const SizedBox(height: 24),
                       // Proje adı
@@ -134,29 +149,6 @@ class _ProjectCardState extends State<ProjectCard> {
                         ),
                     ],
                   ),
-                ),
-              ),
-              // Store ikonları — sağ üst köşe
-              Positioned(
-                right: cardPadding,
-                top: cardPadding,
-                child: Row(
-                  children: [
-                    if (widget.project.appStoreUrl != null)
-                      _StoreIcon(
-                        icon: Icons.apple,
-                        tooltip: 'App Store',
-                        onTap: () => _launch(widget.project.appStoreUrl),
-                      ),
-                    if (widget.project.playStoreUrl != null) ...[
-                      const SizedBox(width: 8),
-                      _StoreIcon(
-                        icon: Icons.android,
-                        tooltip: 'Play Store',
-                        onTap: () => _launch(widget.project.playStoreUrl),
-                      ),
-                    ],
-                  ],
                 ),
               ),
             ],

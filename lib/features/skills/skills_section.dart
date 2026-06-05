@@ -7,13 +7,10 @@ import '../../core/theme/app_text_styles.dart';
 const _skills = [
   'Flutter', 'Dart 3', 'Riverpod', 'Bloc', 'Cubit',
   'Clean Architecture', 'MVVM',
-  'Supabase', 'Firebase', 'SQLite', 'SQL', 'Hive',
-  'Firebase Auth', 'Supabase Auth',
+  'Supabase', 'Firebase', 'SQL',
   'RAG Pipeline', 'Prompt Engineering',
-  'GoRouter', 'Freezed', 'json_serializable',
   'RevenueCat', 'Google Mobile Ads', 'IAP',
-  'Codemagic', 'GitHub', 'Figma', 'Postman',
-  'App Store Connect', 'Google Play Console',
+  'Codemagic', 'App Store Connect', 'Google Play Console',
 ];
 
 class SkillsSection extends StatefulWidget {
